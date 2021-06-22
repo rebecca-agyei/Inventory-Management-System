@@ -1,17 +1,15 @@
 body{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: whitesmoke;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;;    background-color: whitesmoke;
 }
 
 .sidenav {
     margin-left: 0;
     padding: 0;
-    width: 250px;
+    width: 200px;
     background-color: black;
     position: fixed;
     height: 100%;
     overflow: hidden;
-    /* text-align: center; */
     font-weight: bold;
     overflow: hidden;
   }
@@ -25,16 +23,16 @@ body{
   
   .sidenav a.home {
     background-color: #fff;
-    color: #189ad3;
-    margin-left: 20px;
-    border-radius: 20px 0 0 20px;
+    color: black;
+    margin-right: 20px;
+    border-radius: 0 25px 25px 0;
   }
   
   .sidenav a:hover:not(.home) {
     background-color: #fff;
-    color: #189ad3;
-    margin-left: 20px;
-    border-radius: 20px 0 0 20px;
+    color: black;
+    margin-right: 20px;
+    border-radius: 0 25px 25px 0;
   }
 
   @media screen and (max-width: 700px) {
@@ -56,6 +54,71 @@ body{
 
   .sidenav h2{
       color: #fff;
-      font-family: Georgia, 'Times New Roman', Times, serif;
       text-align: center;
   }
+
+  .topper {
+    width: 80%;
+    margin-left: 200px;
+    height: 3rem;
+    padding: 0 2.5rem;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .topper i {
+    float: right;
+    color: black;
+    padding: 14px ;
+    text-decoration: none;
+    font-size: 40px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    left: 35%;
+    display: inline-block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+    margin: 2rem auto;
+    text-align: center;
+    
+  }
+  
+  #entry-text {
+    width: 10rem;
+    padding: 1rem;
+  }
+  
+  #entry-text1 {
+    width: 10rem;
+    padding: 1rem;
+  }
+
+  #entry-text2 {
+    width: 10rem;
+    padding: 1rem;
+  }
+
+  .card p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .container{
+    margin-left: 205px;
+  }
+
+  table{
+    width: 100%;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+
+  th, td{
+    padding: 10px;
+  }
+
