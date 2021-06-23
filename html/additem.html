@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Item</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+</head>
+<body>
+    <div class="sidenav">
+        <h2>RASA</h2>
+        <a href="../index.html">Dashbord</a>
+        <a class="home" href="/html/additem.html">Add Item</a>
+        <a href="/html/stockupdate.html">Update Quantity</a>
+        <a href="/html/updateitem.html">Update item details</a>
+        <a href="/html/removeitem.html">Remove Items</a>
+    </div>
+
+    <div class="topper">
+        <a href="https://web.facebook.com/rebecca.agyei.73/" target="_blank"><i class="zmdi zmdi-facebook-box zmdi-hc-3x"></i></a>
+        <a href="https://github.com/rebecca-agyei" target="_blank"><i class="zmdi zmdi-github-box zmdi-hc-3x"></i></a>
+        <a href="https://www.linkedin.com/in/rebecca-agyei/" target="_blank"><i class="zmdi zmdi-linkedin-box zmdi-hc-3x"></i></a>
+    </div>
+
+    <div class="add-item">
+        <h1>Kindly add an item here</h1>
+        <form action="">
+            <span><label for="name">Item ID</label></span> 
+            <input type="text" id="name" name="name" ><br><br>
+            <span><label for="name">Name of Item</label></span> 
+            <input type="text" id="name" name="name" ><br><br>
+            <span><label for="description">Description</label></span> 
+            <input type="text" id="description" name="description" ><br><br>
+            <span><label for="category">Category</label></span> 
+            <select name="category" id="category">
+                <option value="select">Select Category</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Romance">Romance</option>
+                <option value="Comic">Comic</option>
+                <option value="Christian books">Christian</option>
+                <option value="Horror">Horror</option>
+                <option value="Educational">Educational</option>
+              </select> <br><br>
+            <span><label for="quantity">Quantity Available</label></span>
+            <input type="number" id="quantity" name="quantity"> <br> <br>
+        </form>
+        <div class="add-button">
+            <button>ADD ITEM</button>
+        </div>
+    </div>   
+    
+</body>
+</html>
