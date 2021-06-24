@@ -5,14 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <img src="" alt="">
+    <div class="main-container">
     <div class="sidenav">
-        <h2>RASA</h2>
+        <h1>RASA</h1> <br> 
         <a class="home" href="index.html">Dashbord</a>
         <a href="/html/additem.html">Add Item</a>
         <a href="/html/stockupdate.html">Update Quantity</a>
@@ -20,78 +22,60 @@
         <a href="/html/removeitem.html">Remove Items</a>
     </div>
 
+    <div class=container>
     <div class="topper">
         <a href="https://web.facebook.com/rebecca.agyei.73/" target="_blank"><i class="zmdi zmdi-facebook-box zmdi-hc-3x"></i></a>
         <a href="https://github.com/rebecca-agyei" target="_blank"><i class="zmdi zmdi-github-box zmdi-hc-3x"></i></a>
         <a href="https://www.linkedin.com/in/rebecca-agyei/" target="_blank"><i class="zmdi zmdi-linkedin-box zmdi-hc-3x"></i></a>
     </div>
+    <br> 
 
-    <main>
-        <section id="entry-text" class="card">
-            <p>total</p>
-        </section>
-        <section id="entry-text1" class="card">
-            <p>items</p>
-            </section>
-        <section id="entry-text2" class="card">
-            <p>category</p>
-        </section>
-    </main>
+    <div class="card-container">
+        <div class="card">
+            <div class="cardName">Total Number of Items</div>
+            <div id="total"class="numbers"></div>
+                
+        </div>
+        <div class="card">
+            <div class="cardName">Items in Stock</div>
+            <div id="itemsInStock" class="numbers"></div>
+        </div>
+        <div class="card">
+            <div class="cardName">Total Number of Categories</div>
+            <div class="numbers"></div>              
+        </div>
+    </div>
+    <br>
 
-    <hr>
+    <div class="search">
+        <label>
+            <input type="text" placeholder="Search">
+        </label>
+    </div>
+    <br>
+
 
     <div class="table-container">
-        <table>
-            <tbody>
-                <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Category</th>
-                    <th>Quantity Available</th>
-                    <th>Label</th>
+        <table id="table"> 
+            <thead> 
+                <tr class="headings">
+                    <td id="nameItem">Name</td>
+                    <td id="describeItem">Description</td>
+                    <td id="categoryItem">Category</td>
+                    <td id="quantityItem">Quantity</td>
+                    <td id="labelItem">Label</td>
+                    <td id="updateDelete">Action</td>
+                    <td></td>
                 </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>3</td>
-                    
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>2</td>
-                    <td>3</td>
-                </tr>
-                
-            </tbody>   
-        </table>
-        
+            </thead> 
+            <tbody class="row-style" id="product-items">
+               
+            </tbody>
+        </table> 
+    </div> 
+    </div> 
         
     </div>
-    
+    <script src="/js/script.js"></script>
 </body>
 </html>

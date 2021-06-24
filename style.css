@@ -1,12 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body{
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;;    
     background-color: whitesmoke;
     overflow-x: hidden;
 }
 
+.main-container{
+  position: relative;
+  width: 100%;
+}
+
 .sidenav {
-    margin-left: 0;
-    padding: 0;
     width: 200px;
     background-color: black;
     position: fixed;
@@ -37,38 +46,27 @@ body{
     border-radius: 0 25px 25px 0;
   }
 
-  @media screen and (max-width: 700px) {
-    .sidenav {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    .sidenav a {float: left;}
-    div.content {margin-left: 0;}
-  }
-  
-  @media screen and (max-width: 400px) {
-    .sidenav a {
-      text-align: center;
-      float: none;
-    }
-  }
-
-  .sidenav h2{
+  .sidenav h1{
       color: #fff;
       text-align: center;
+      padding-top: 10px;
   }
 
-  .topper {
-    width: 80%;
-    margin-left: 200px;
+  .container {
+    position: absolute;
+    width: calc(100% - 200px);
+    left: 200px;
+  }
+  
+  .container .topper {
+    width: 100%;
     height: 3rem;
     padding: 0 2.5rem;
     overflow: hidden;
     text-align: center;
   }
 
-  .topper i {
+  .container .topper i {
     float: right;
     color: black;
     padding: 14px ;
@@ -76,41 +74,46 @@ body{
     font-size: 40px;
   }
 
-  .card {
-    background: white;
-    border-radius: 10px;
+  .card-container {
     position: relative;
-    left: 35%;
-    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+
+  .card-container .card {
+    position: relative;
+    background: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-    margin: 2rem auto;
-    text-align: center;
-    
-  }
-  
-  #entry-text {
-    width: 10rem;
-    padding: 1rem;
-  }
-  
-  #entry-text1 {
-    width: 10rem;
-    padding: 1rem;
-  }
+}
 
-  #entry-text2 {
-    width: 10rem;
-    padding: 1rem;
-  }
+.search {
+  position: relative;
+  width: 300px;
+  margin: auto;
+}
 
-  .card p {
-    font-size: 1.5rem;
-    text-align: center;
-  }
+.search label {
+    position: relative;
+    width: 100%;
+}
 
-  .table-container{
-    margin-left: 205px;
-  }
+.search label input {
+    width: 100%;
+    height: 30px;
+    border-radius: none;
+    padding: 5px 20px;
+    border: 1px solid gray;
+    outline: none;
+    color: black;
+    background: white;
+}
 
   table{
     width: 100%;
@@ -118,27 +121,67 @@ body{
     border-collapse: collapse;
   }
 
-  tr {
-    border-bottom: 1px sold;  
+  tr:nth-of-type(even){
+    background-color: rgba(102, 51, 153, 0.3);
   }
 
-  th, td{
-    padding: 10px;
+  thead {
+    border-bottom: 1px solid;
+    border-top: 1px solid;
+    padding: 15px; 
+    font-weight: bold; 
+  }
+
+  .row-style{
+    
+  }
+
+  tr{
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+  
+  td{
+    padding: 15px;  
+  }
+
+  #nameItem{
+    width: 20%;
+  }
+
+  #describeItem{
+    width: 25%;
+  }
+
+  #categoryItem{
+    width: 15%;
+  }
+
+  #quantityItem{
+    width: 10%;
+  }
+
+  #labelItem{
+    width: 17%;
+  }
+
+  #updateDelete{
+    width: 10%;
   }
 
   .add-item{
-      margin-top: 35px;
+      margin-top: 30px;
       margin-left: 300px;
       height: 50%; 
       width: 50%;
-      padding: 30px;
+      padding: 10px 30px 20px 30px;
       text-align: left;
       display: flex;
       flex-direction: column; 
       border: 1px solid;
-    }
+  }
 
-    .add-item h1{
+    .add-item h2{
       text-align: center;
     }
 
@@ -153,20 +196,52 @@ body{
       border: 1px solid #ccc;
       padding: 0.4rem 0.2rem;
       color: #383838;
-      width: 70%;
       border-radius: 5px;
-      padding: 10px;
+      padding: 5px;
+      width: 70%;
     }
 
-    select {
+    ::placeholder{
+      font-size: medium;
+    }
+
+    textarea {
       font: inherit;
       border: 1px solid #ccc;
       padding: 0.4rem 0.2rem;
       color: #383838;
+      border-radius: 5px;
+      padding: 5px;
     }
-    
-    input:focus {
+
+    input:focus, textarea:focus {
       outline: none;
       background: #ecf5ff;
     }
+
+    input:focus::placeholder {
+      color: transparent;
+    }
+
+    .add_button {
+      font: inherit;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid;
+      background: #f6228c;
+      color: black;
+      border-radius: 6px;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.26);
+      cursor: pointer;
+      margin: 0 0.5rem;   
+      width: 30%; 
+      font-weight: bold;
+    }
+
+    .add_button:hover{
+      background: yellow;
+      border-color: black;
+    }
+
+
+    
   
