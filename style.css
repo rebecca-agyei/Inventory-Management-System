@@ -138,7 +138,7 @@ body{
   }
   
   td{
-    padding: 15px;  
+    padding: 10px 0px 10px 0px;  
   }
 
   #nameItem{
@@ -154,7 +154,7 @@ body{
   }
 
   #quantityItem{
-    width: 10%;
+    width: 13%;
   }
 
   #labelItem{
