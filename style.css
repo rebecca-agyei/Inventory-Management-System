@@ -247,6 +247,41 @@ body{
       border-color: black;
     }
 
+    .remove_item i{
+      font-size: 5vw;
+      margin-left: 3vw;
+      margin-top: 2vh;
+  }
+  .remove_item button{
+      border: none;
+      border-radius: 5px;
+      color: white;
+      width: 5vw;
+      height: 5vh;
+      font-size: 2.5vh;
+      float: right;
+      margin-right: 2vw;
+      margin-top: 9vh;
+  }
+  .remove_item .delete{
+      
+      background-color: rgb(51, 177, 51);
+  }
+  .remove_item .del_cancel{
+      background-color:  rgb(235, 81, 81);
+  }
+  .remove_item .delete:hover{
+      background-color: white;
+      border: 1px solid rgb(51, 177, 51);
+      color: rgb(51, 177, 51);
+  }
+  .remove_item .del_cancel:hover{
+      background-color: white;
+      border: 1px solid rgb(235, 81, 81);
+      color:  rgb(235, 81, 81);
+      
+  }
+
 
     
   

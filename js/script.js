@@ -1,14 +1,4 @@
 
-
-    
-// }
-// const editItem = (index) => {
-//     console.log(index)
-//     let localStorageProducts = JSON.parse(localStorage.getItem("itemsInfo"));
-//     localStorageProducts[index].editItemBtnClicked = true;
-//     localStorage.setItem("itemsInfo", JSON.stringify(localStorageProducts));
-// }
-
 let labelColor = () => {
     products = JSON.parse(localStorage.getItem("itemsInfo"));
   
@@ -50,7 +40,7 @@ let labelColor = () => {
               <td class="num">${localStorageProducts[i].quantity}</div></td>
               <td id='label_color${i}'>Check</td>
               <td><i class="fa fa-pencil" aria-hidden="true" id="upd_${i}" onClick="productGetUpdate(this.id)" href="../html/stockupdate.html"></i> &nbsp;&nbsp; 
-              <i id="del_${i}" class="fa fa-trash-o" aria-hidden="true" onclick="deleteModal(this.id)"></i></td>
+              <i id="del_${i}" class="fa fa-trash-o" aria-hidden="true" onclick="removeItem()"></i></td>
               </tr>
       `
           }
@@ -92,19 +82,32 @@ totalItemsInStock()
 
 const totalNumberOfCategories = () => {
 let products = JSON.parse(localStorage.getItem("itemsInfo"));
-let distinctValues = [];
+let categoryAssign = [];
 for (i = 0; i < products.length; i++) {
-  if (!distinctValues.includes(products[i].category.toLowerCase())) {
-    distinctValues.push(products[i].category.toLowerCase());
+  if (!categoryAssign.includes(products[i].category.toLowerCase())) {
+    categoryAssign.push(products[i].category.toLowerCase());
   }
 }
 
-document.getElementById("totalCategories").innerText = distinctValues.length;
+document.getElementById("totalCategories").innerText = categoryAssign.length;
 
 } 
 
 totalNumberOfCategories()
-  
+
+let rowDelete = 0;
+let removeItem = () => {
+    let products = JSON.parse(localStorage.getItem("itemsInfo"));
+    products.splice(rowDelete,1);
+    console.log(products)
+    localStorage.setItem("itemsInfo",JSON.stringify(products));
+
+    location.reload()
+}
+
+
+
+
    
 
 
