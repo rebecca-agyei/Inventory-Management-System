@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="sidenav">
+        
         <h1>RASA</h1> <br>
         <a href="../index.html">Dashbord</a>
         <a href="/html/additem.html">Add Item</a>
@@ -26,10 +27,26 @@
     </div>
 
     <div class="add-item">
-        Update
+        <div class="update_item" id="update_item">
+            <div class="item_detail">
+                <h2>Update Item Details</h2> 
+            <form>
+                <div class="input_item"><label for="name">Name of Item</label> <br>
+                <input type="text" id="new_name" > </div> <br>
+                <div class="input_item"><label >Description</label> <br>
+                <textarea type="text" id="new_description" cols="60" row="100" ></textarea> </div><br>
+                <div class="input_item"><label>Category</label> <br>
+                <input type="text" id="new_category" placeholder="Romance, Thriller, Christian, Science or Horror"></div> <br>
+                <div class="input_item"><label>Quantity Available</label> <br>
+                <input type="number" id="new_quantity"></div><br>
+                <div class="input_item">
+                <input type="submit" value="UPDATE ITEM" class="add_button">
+                </div>
+            </form>
+
     </div>
 
-
+    <script src="../js/stockupdate.js"></script>
     
 </body>
 </html>

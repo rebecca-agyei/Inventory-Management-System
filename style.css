@@ -93,6 +93,14 @@ body{
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
+.cardName{
+  font-weight: bold;
+}
+
+.numbers{
+  font-weight: bold;
+}
+
 .search {
   position: relative;
   width: 300px;
@@ -135,6 +143,7 @@ body{
   tr{
     text-align: center;
     border-bottom: 1px solid;
+    cursor: pointer;
   }
   
   td{
